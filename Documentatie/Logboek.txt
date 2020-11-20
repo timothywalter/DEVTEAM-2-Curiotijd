@@ -1,6 +1,10 @@
+Luc Thyssen
+
 Week 1:
-18-11-2020: 	Gesprek met project leider
+18-11-2020: 	
+		Gesprek met project leider
 		Alles genoteerd en later besproken met het projectgroepje
 
-20-11-2020: 	Wireframes gemaakt
-		Stijlblad gemaakt
+20-11-2020: 	
+		Wireframes gemaakt
+		Laravel / project startup gemaakt

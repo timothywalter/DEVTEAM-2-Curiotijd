@@ -2,9 +2,28 @@
     margin: 0;
     padding: 0;
 }
+
 /* header */
 nav{
+    color: white;
     display: flex;
     justify-content: space-around;
     background-color: #031CA6;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+nav a{
+    transition: 1s;
+}
+
+nav a:hover{
+    background-color: white;
+    border-radius: 15px;
+    transition: 1s;
+    padding: 10px;
+    color: #031CA6;
 }

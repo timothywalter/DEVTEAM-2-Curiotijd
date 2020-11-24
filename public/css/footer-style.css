@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+footer{
+    padding: 10px;
+    background-color: #91a3D9;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-left, .footer-right{
+    background-color: #ced7f2;
+    border-radius: 20px;
+    padding: 10px 50px 10px 50px;
+}

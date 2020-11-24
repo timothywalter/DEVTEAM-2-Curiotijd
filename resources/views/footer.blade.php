@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -22,13 +24,19 @@
             }
         </style>
     </head>
-        {{-- @include('../header.blade.php'); --}}
-       <main>
-            <div class="max-width-main">
-                <div class="content">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, debitis! Ea cupiditate eveniet temporibus explicabo quos. Soluta incidunt, rem exercitationem mollitia optio dolore nam perferendis quaerat cumque, ipsa neque expedita!
-                </div>
-            </div>
-       </main>
-          
+    <footer>
+    <div class="footer-left">
+        <a href="">lorem</a><br>
+        <a href="">lorem</a><br>
+        <a href="">lorem</a><br>
+        <a href="">lorem</a>
+    </div>
+    <div class="footer-right">
+        <a href="">lorem</a><br>
+        <a href="">lorem</a><br>
+        <a href="">lorem</a><br>
+        <a href="">lorem</a>
+    </div>
+    </footer>
+    </body>
 </html>

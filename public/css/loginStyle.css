@@ -1,0 +1,60 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+img{
+	opacity: 0.5;
+}
+
+body{
+	background-image: url(../img/schoolBackground.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.header{
+	display: flex;
+	width: 30%;
+	margin: 50px auto 0px;
+	color: white;
+	background: #031ca6;
+	text-align: center;
+	border: 1px solid #B0C4DE;
+	border-bottom: none;
+	border-radius: 10px 10px 0px 0px;
+	padding: 20px;
+}
+
+form, .content{
+	width: 30%;
+	margin: 0px auto;
+	padding: 20px;
+	border: 1px solid #B0C4DE;
+	background: #4563BF;
+	border-radius: 0px 0px 10px 10px;
+}
+
+.btn{
+	padding: 10px;
+	font-size: 15px;
+	color: white;
+	background: #91A3D9;
+	border:none;
+	border-radius: 5px;
+	transition: 1s;
+}
+
+.btn:hover{
+	padding: 10px;
+	font-size: 20px;
+	color: black;
+	background: white;
+	border:none;
+	border-radius: 5px;
+}
+
+.inputGroup{
+display: flex; justify-content: start;
+margin: 30px 0px;
+}

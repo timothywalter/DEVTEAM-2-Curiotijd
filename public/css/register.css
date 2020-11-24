@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    text-align: center;
+    color: #ced7fc;
+}
+input{
+    border-width: 1px;
+
+    border-color: #91a3d9;
+}
+form {
+    text-align: center;
+
+}
+
+.input-register{
+    
+}
+
+.header{
+    padding: 1%;
+    background-color: #031ca6;
+    box-shadow: 10px 5px 5px gray;
+}

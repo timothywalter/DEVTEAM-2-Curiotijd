@@ -22,26 +22,13 @@
             }
         </style>
     </head>
-    <body class="antialiased">
-       <header>
-           <nav>
-               <a href="">Login</a>
-               <a href="">Dashboard</a>
-               <a href="">Register</a>
-               <a href="">Home</a>
-               <a href="">Lorem</a>
-           </nav>
-       </header>
+        {{-- @include('../header.blade.php'); --}}
        <main>
-
+            <div class="max-width-main">
+                <div class="content">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, debitis! Ea cupiditate eveniet temporibus explicabo quos. Soluta incidunt, rem exercitationem mollitia optio dolore nam perferendis quaerat cumque, ipsa neque expedita!
+                </div>
+            </div>
        </main>
-       <footer>
-           <div class="footer-left">
-
-           </div>
-           <div class="footer-right">
-
-           </div>
-       </footer>
-    </body>
+          
 </html>

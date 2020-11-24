@@ -2,9 +2,22 @@
     margin: 0;
     padding: 0;
 }
-
+/* header */
 nav{
     display: flex;
     justify-content: space-around;
-    
+    background-color: #031CA6;
+}
+
+/* main */
+.max-width-main{
+    width: 768px;
+    margin: 0 auto;
+}
+
+
+/* Footer */
+footer{
+    display: flex;
+    justify-content: space-around;
 }

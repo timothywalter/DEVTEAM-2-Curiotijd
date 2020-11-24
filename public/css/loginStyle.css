@@ -3,6 +3,16 @@
 	padding: 0px;
 }
 
+img{
+	opacity: 0.5;
+}
+
+body{
+	background-image: url(../img/schoolBackground.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 .header{
 	display: flex;
 	width: 30%;

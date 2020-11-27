@@ -20,9 +20,9 @@
     <body>
     
         <div class="header">    
-        <h2>Login</h2>
+        <h1>Login</h1>
     </div>
-    <form method="post" action="login.php">
+    <form method="post" action="">
         <!--display validation errors here -->
         <div class="inputGroup">
             <label>Username: </label>
@@ -36,7 +36,7 @@
         <button type="submit" name="login" class="btn">Login</button>
     </div>
     <p>
-        Not yet a member? <a href="register.php">Sign up</a>
+        Not yet a member? <a href="register">Sign up</a>
     </p>
     </form>
 

@@ -19,6 +19,7 @@ nav{
 
 nav a{
     transition: 1s;
+    color: white;
 }
 
 nav a:hover{

@@ -30,12 +30,3 @@ Route::get('account', function () {
 Route::get('dashboard', function () {
     return view('dashboard');
 });
-
-// test routes
-Route::get('header-test', function () {
-    return view('header');
-});
-
-Route::get('footer-test', function () {
-    return view('footer');
-});

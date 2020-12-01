@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AchievementsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,8 +17,6 @@ Route::get('/', function () {
     return view('login');
 });
 
-
-
 Route::get('register', function () {
     return view('register');
 });
@@ -27,15 +25,8 @@ Route::get('account', function () {
     return view('account');
 });
 
+Route::get('achievements', [AchievementsController::class, 'index']);
+
 Route::get('dashboard', function () {
     return view('dashboard');
-});
-
-// test routes
-Route::get('header-test', function () {
-    return view('header');
-});
-
-Route::get('footer-test', function () {
-    return view('footer');
 });

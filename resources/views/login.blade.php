@@ -1,4 +1,3 @@
-@extends('layout.main')
         <style>
             body {
                 font-family: 'Nunito';
@@ -6,9 +5,7 @@
         </style>
     </head>
     <body>
-    @section('content')
         
-    
         <div class="header">    
         <h1>Login</h1>
     </div>
@@ -29,6 +26,5 @@
         Not yet a member? <a href="register">Sign up</a>
     </p>
     </form>
-    @endsection
     </body>
 </html>

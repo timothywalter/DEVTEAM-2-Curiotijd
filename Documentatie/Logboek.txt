@@ -8,3 +8,15 @@ Week 1:
 20-11-2020: 	
 		Wireframes gemaakt
 		Laravel / project startup gemaakt
+
+Week 2:
+24-11-2020:
+		Header / footer gemaakt
+		Overlegd met de groep over de indeling
+		Styled
+
+Ruben Smit
+
+Kevin van der Staaij
+
+Teun Rompa

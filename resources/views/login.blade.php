@@ -6,6 +6,8 @@
         </style>
     </head>
     <body>
+    @section('content')
+        
     
         <div class="header">    
         <h1>Login</h1>
@@ -27,6 +29,6 @@
         Not yet a member? <a href="register">Sign up</a>
     </p>
     </form>
-
+    @endsection
     </body>
 </html>

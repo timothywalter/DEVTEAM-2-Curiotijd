@@ -1,4 +1,5 @@
-@extends('layout.main')
+<link rel="stylesheet" href="css\register.css">
+
         <style>
             body {
                 font-family: 'Nunito';
@@ -22,7 +23,7 @@
             <button type="submit" name="resgisterBtn" class="btn">Register</button>
         </div>
         <p>
-            Already a member? <a href="login">Login</a>
+            Already a member? <a href="/">Login</a>
         </p>
         </form>
 </html>

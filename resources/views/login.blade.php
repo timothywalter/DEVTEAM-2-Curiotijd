@@ -1,4 +1,6 @@
-        <style>
+      <link rel="stylesheet" href="css\loginStyle.css">
+      
+      <style>
             body {
                 font-family: 'Nunito';
             }

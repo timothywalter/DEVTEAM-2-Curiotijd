@@ -21,10 +21,12 @@ Route::get('register', function () {
     return view('register');
 });
 
+
 Route::get('account', function () {
     return view('account');
 });
 
+Route::post('achievements', [AchievementsController::class, 'store']);
 Route::get('achievements', [AchievementsController::class, 'index']);
 
 Route::get('dashboard', function () {

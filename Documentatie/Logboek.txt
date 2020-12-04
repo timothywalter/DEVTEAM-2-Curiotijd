@@ -15,6 +15,11 @@ Week 2:
 		Overlegd met de groep over de indeling
 		Styled
 
+1-12-2020:
+		Dashboard gemaakt
+		met extends een layout gemaakt
+		bootstrap toegaepast als style
+
 Ruben Smit
 
 Kevin van der Staaij

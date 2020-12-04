@@ -37,7 +37,12 @@
     
         {{-- end of content --}}
         {{-- start of footer --}}
-        <footer>
+        <div class="content">
+  
+          <div class="push"></div>
+        </div>
+        
+        <footer class="footer">
           <div class="footer-left">
             <a href="">lorem</a><br>
             <a href="">lorem</a><br>

@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+
 footer{
     padding: 10px;
     background-color: #91a3D9;
@@ -14,4 +19,16 @@ footer{
     background-color: #ced7f2;
     border-radius: 20px;
     padding: 10px 50px 10px 50px;
+}
+
+/* code to make footer sticky */
+
+.content {
+    padding: 20px;
+    min-height: 80%;
+    margin: 0 auto -50px;
+}
+.footer,
+.push {
+    height: 150px;
 }

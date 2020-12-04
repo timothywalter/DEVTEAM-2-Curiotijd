@@ -1,0 +1,21 @@
+.container{
+    background-color: #CED7F2;
+}
+
+#leaderbordDIV {
+    display: none;
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: lightblue;
+    margin-top: 20px;
+}
+
+#badgeDIV {
+    display: none;
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: lightblue;
+    margin-top: 20px;
+}

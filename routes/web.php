@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AchievementsController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,6 +29,7 @@ Route::get('account', function () {
 
 Route::post('achievements', [AchievementsController::class, 'store']);
 Route::get('achievements', [AchievementsController::class, 'index']);
+Route::get('user', [userController::class, 'levelSysteem']);
 
 Route::get('dashboard', function () {
     return view('dashboard');

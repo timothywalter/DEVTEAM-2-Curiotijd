@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\DB;
 class UserController extends Controller
 {
     public function levelSysteem() {
+        if(!isset($_SESSION['gebruikersnaam'])) {
+            exit;
+        }
         $levelCounter= 0;
        // $users = DB::Select('select * from student WHERE id = 1');
        // $users = DB::table('student')->get();  // SELECT * FROM students
@@ -18,7 +21,10 @@ class UserController extends Controller
                 $levelCounter += 1;
                 $xp -= 100;
             }
-            return "level: " . $levelCounter . " en $xp XP";
+            return [
+                "level" => $levelCounter,
+                "experience" => $xp
+            ];
         }
 
         

@@ -11,8 +11,10 @@
         <div class="header">    
         <h1>Login</h1>
     </div>
-    <form method="post" action="">
-        <!--display validation errors here -->
+
+    <form action="{{url('login')}}"  method="post" enctype="multipart/form-data">
+        @csrf
+       
         <div class="inputGroup">
             <label>Username: </label>
             <input type="text" name="username" required>
@@ -27,6 +29,8 @@
     <p>
         Not yet a member? <a href="register">Sign up</a>
     </p>
+
     </form>
+
     </body>
 </html>

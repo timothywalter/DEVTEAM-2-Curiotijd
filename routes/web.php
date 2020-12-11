@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AchievementsController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,14 +16,6 @@ use App\Http\Controllers\LoginController;
 |
 */
 
-
-
-
-
-
-Route::get('register', function () {
-    return view('register');
-});
 
 Route::get('/', function () {
     return view('login');
@@ -36,8 +29,8 @@ Route::post('achievements', [AchievementsController::class, 'store']);
 Route::get('achievements', [AchievementsController::class, 'index']);
 Route::get('user', [userController::class, 'levelSysteem']);
 
-Route::post('login', [LoginController::class, 'store']);
-Route::get('login', [LoginController::class, 'index']);
+Route::post('register', [RegisterController::class, 'store']);
+Route::get('register', [RegisterController::class, 'index']);
 
 Route::get('dashboard', function () {
     return view('dashboard');

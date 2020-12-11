@@ -20,11 +20,15 @@ Week 2:
 		met extends een layout gemaakt
 		bootstrap toegaepast als style
 
+week 3:
 4-12-2020:
 		dashboard verder gemaakt
 		leaderbord / badges menu gemaakt
 		dashboard grotendeels gestyled met bootstrap
 
+8-12-2020:
+		Images oproepen via database
+		Layout improved
 
 Ruben Smit
 

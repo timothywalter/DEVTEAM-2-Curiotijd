@@ -18,5 +18,6 @@ class LoginController extends Controller
     }
     public function store(Request $request) {
         dd( $request->all() ); // dit is een soort var_dump($_POST)
+
     }
 }

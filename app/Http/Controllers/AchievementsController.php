@@ -17,6 +17,13 @@ class AchievementsController extends Controller
         ]);
     }
     public function store(Request $request) {
+        DB::table('achievements')->insert(
+            [
+                'achievement' => $request['badgeTitle'],
+                'experience' => $request['expgain'],
+                'created_by' => 1
+            ]
+        );
         dd( $request->all() ); // dit is een soort var_dump($_POST)
     }
 }

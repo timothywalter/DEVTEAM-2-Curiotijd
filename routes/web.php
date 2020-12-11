@@ -17,12 +17,6 @@ use App\Http\Controllers\RegisterController;
 */
 
 
-
-
-
-
-
-
 Route::get('/', function () {
     return view('login');
 });

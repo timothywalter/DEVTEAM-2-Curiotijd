@@ -35,8 +35,8 @@ Route::post('achievements', [AchievementsController::class, 'store']);
 Route::get('achievements', [AchievementsController::class, 'index']);
 Route::get('user', [userController::class, 'levelSysteem']);
 
-Route::post('register', [LoginController::class, 'store']);
-Route::get('register', [LoginController::class, 'index']);
+Route::post('register', [RegisterController::class, 'store']);
+Route::get('register', [RegisterController::class, 'index']);
 
 Route::get('dashboard', function () {
     return view('dashboard');

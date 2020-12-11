@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="css\loginStyle.css">
+<link rel="stylesheet" href="css\register.css">
       
 <style>
       body {
@@ -9,7 +9,7 @@
 <body>
   
   <div class="header">    
-  <h1>Login</h1>
+  <h1>Register</h1>
 </div>
 
 <form action="{{url('register')}}"  method="post" enctype="multipart/form-data">
@@ -17,17 +17,17 @@
  
   <div class="inputGroup">
       <label>Username: </label>
-      <input type="text" name="username" required>
+      <input type="text" name="Username" required>
   </div>
   <div class="inputGroup">
       <label>Password: </label>
-      <input type="password" name="password" required>
+      <input type="password" name="Password" required>
   </div>
   <div class="inputGroup">
   <button type="submit" name="registerBtn" class="btn">Register</button>
 </div>
 <p>
-  Already a member? <a href="login">Login</a>
+  Already a member? <a href="/">Login</a>
 </p>
 
 </form>

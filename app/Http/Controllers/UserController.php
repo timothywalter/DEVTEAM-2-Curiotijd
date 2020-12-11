@@ -20,14 +20,21 @@ class UserController extends Controller
         $xp = $user->experience;
         while  ($xp >= $levelup) {
                 $levelCounter += 1;
-                $levelup = $levelup + 25;
                 $xp -= $levelup;
+                $levelup = $levelup + 25;
+                
             }
-            return [
+            $procentxpBar = $xp / $levelup * 100; 
+            // if ($procentxpBar < 0) {
+            //     $procentxpBar = 1; 
+            // }
+            return view('account',[
                 "level" => $levelCounter,
                 "experience" => $xp,
-                "levelup" => $levelup
-            ];
+                "levelup" => $levelup,
+                "xpbarprocent" => $procentxpBar
+            ]);
+                
         }
 
         

@@ -30,8 +30,33 @@ body{
     background-color: #069;
     border-radius: 1em;
     padding: 1em;
+    font-family: 'Times New Roman', Times, serif;
 }
 .divtest {
     position: relative;
     top: 100px;
+    left: 100px;
 }
+.level{
+    /* position: absolute;
+    left: 31px;
+    top: 109px; */
+    color: white;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 388px;
+    top: -5px;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+.xpToLevelUp {
+    position: absolute;
+    top: 146px;
+    left: 24px;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* //#069 */

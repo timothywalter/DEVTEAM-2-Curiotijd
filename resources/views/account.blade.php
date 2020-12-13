@@ -14,11 +14,13 @@
     </head>
     <body class="antialiased">
         <div class="divtest">
-            <p div="levelCounter">Level: {{$level}}</p>
-            {{$xpbarprocent}}
+                
+                <p class="xpToLevelUp">You need {{$xptolevelup}} more xp to level up!</p>
+            <div class="xp_bar" style="--width: {{$xpbarprocent}}" data-label="Experience"><p class="level">Level: {{$level}}</p></div>
+            
         </div>
     
-    <div class="xp_bar" style="--width: {{$xpbarprocent}}" data-label="Experience"></div>
+    {{-- /*{{$xpbarprocent}} --}}
     
        
     </body>

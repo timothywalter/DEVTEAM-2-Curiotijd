@@ -6,18 +6,27 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\DB;
 
+use App\Models\Login;
+
 class LoginController extends Controller
 {
     public function index(){
         //haalt data uit de db op
-        $login = DB::select("SELECT * FROM student");
+        $students = DB::table('student')
+        ->get();
 
-        return view('login', [
-            'login' => $login
+        $students = Login::all();
+
+        return view('/', [
+'login' => $students
         ]);
     }
-    public function store(Request $request) {
-        dd( $request->all() ); // dit is een soort var_dump($_POST)
+
+    public function loginCheck()
+    {
 
     }
+  
 }
+   
+

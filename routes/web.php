@@ -36,6 +36,7 @@ Route::get('dashboard', function () {
     return view('dashboard');
 });
 
+Route::get('login', [LoginController::class, 'loginCheck']);
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //     return view('dashboard');
 // })->name('dashboard');

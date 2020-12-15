@@ -25,8 +25,9 @@ Route::get('account', function () {
     return view('account');
 });
 
-Route::post('achievements', [AchievementsController::class, 'store']);
-Route::get('achievements', [AchievementsController::class, 'index']);
+Route::post('achievements.insert', [AchievementsController::class, 'store']);
+Route::get('achievements.insert', [AchievementsController::class, 'insert']);
+Route::get('achievements.index', [AchievementsController::class, 'index']);
 Route::get('user', [userController::class, 'levelSysteem']);
 
 Route::post('register', [RegisterController::class, 'store']);

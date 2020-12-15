@@ -5,19 +5,23 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 //deze namspace is nodig om gebruik te maken van de db class
 use Illuminate\Support\Facades\DB;
+use App\Models\Achievement;
 
 class AchievementsController extends Controller
 {
     public function index(){
         //haalt data uit de db op
-        $achievments = DB::select("SELECT * FROM achievements");
+        $achievments = Achievement::all();
 
-        return view('achievements', [
+        return view('achievements.index', [
             'achievements' => $achievments
         ]);
     }
+    public function insert(){
+        return view('achievements.insert');
+    }
     public function store(Request $request) {
-        DB::table('achievements')->insert(
+        DB::table('achievements.insert')->insert(
             [
                 'achievement' => $request['badgeTitle'],
                 'experience' => $request['expgain'],

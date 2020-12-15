@@ -45,6 +45,7 @@
             <li class="list-group-item">Taak 9</li>
             <li class="list-group-item">Taak 10</li>
         </ul>
+        <a href="{{ url('tasks') }}">maak een taks aan!</a>
         </div>
 
  {{-- middle collumn --}}

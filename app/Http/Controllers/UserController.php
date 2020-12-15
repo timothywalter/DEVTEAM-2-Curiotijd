@@ -17,13 +17,14 @@ class UserController extends Controller
         $user = DB::table('student')->find(1); // SELECT * FROM STDUENT WHERE id = 2
         //$user = DB::table('student')->where('gender', 'm')->where('status', 'ingeschreven')->get(); 
         $levelup = 100;
-        $xp = $user->experience;
+        $xp = $user->total_EXP;
+
         while  ($xp >= $levelup) {
                 $levelCounter += 1;
                 $xp -= $levelup;
-                $levelup = $levelup + 20;
-                
+                $levelup = $levelup + 20;    
             }
+
             $procentxpBar = $xp / $levelup * 100;
             $xptolevelup = $levelup - $xp; 
             // if ($procentxpBar < 0) {
@@ -37,6 +38,10 @@ class UserController extends Controller
                 "xptolevelup" => $xptolevelup
             ]);
                 
+        }
+
+        public function createTask() {
+            
         }
 
         

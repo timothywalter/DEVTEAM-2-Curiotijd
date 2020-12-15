@@ -28,12 +28,16 @@ Route::get('account', function () {
 Route::post('achievements', [AchievementsController::class, 'store']);
 Route::get('achievements', [AchievementsController::class, 'index']);
 Route::get('user', [userController::class, 'levelSysteem']);
+Route::post('task', [userController::class, 'createTask']);
 
 Route::post('register', [RegisterController::class, 'store']);
 Route::get('register', [RegisterController::class, 'index']);
 
 Route::get('dashboard', function () {
     return view('dashboard');
+});
+Route::get('tasks', function () {
+    return view('tasks');
 });
 
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

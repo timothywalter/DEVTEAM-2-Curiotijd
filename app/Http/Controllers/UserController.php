@@ -11,7 +11,7 @@ class UserController extends Controller
         // if(!isset($_SESSION['gebruikersnaam'])) {
         //     exit;
         // }
-        $levelCounter= 0;
+        $levelCounter= 1;
        // $users = DB::Select('select * from student WHERE id = 1');
        // $users = DB::table('student')->get();  // SELECT * FROM students
         $user = DB::table('student')->find(1); // SELECT * FROM STDUENT WHERE id = 2
@@ -20,14 +20,23 @@ class UserController extends Controller
         $xp = $user->experience;
         while  ($xp >= $levelup) {
                 $levelCounter += 1;
-                $levelup = $levelup + 25;
                 $xp -= $levelup;
+                $levelup = $levelup + 20;
+                
             }
-            return [
+            $procentxpBar = $xp / $levelup * 100;
+            $xptolevelup = $levelup - $xp; 
+            // if ($procentxpBar < 0) {
+            //     $procentxpBar = 1; 
+            // }
+            return view('account',[
                 "level" => $levelCounter,
                 "experience" => $xp,
-                "levelup" => $levelup
-            ];
+                "levelup" => $levelup,
+                "xpbarprocent" => $procentxpBar,
+                "xptolevelup" => $xptolevelup
+            ]);
+                
         }
 
         

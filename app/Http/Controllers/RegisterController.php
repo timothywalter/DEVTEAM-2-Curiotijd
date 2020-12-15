@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\DB;
 
+use Illuminate\Http\RedirectResponse;
+
 class RegisterController extends Controller
 {
     public function index(){
@@ -23,9 +25,9 @@ DB::table('student')->insert(
         'username' => $request['Username'],
         'password' => $request['Password'],
         'total_EXP' => 0,
-        'Class' => "AMO2A"
+        'Class' => $request['class']
     ]
     );
-
+    return redirect('/');
    }
 }

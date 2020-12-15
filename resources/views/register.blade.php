@@ -24,6 +24,14 @@
       <input type="password" name="Password" required>
   </div>
   <div class="inputGroup">
+    <select id="class" name="class">
+      <option value="AMO2A">AMO2A</option>
+      <option value="AMO2B">AMO2B</option>
+      <option value="AMO2C">AMO2C</option>
+      <option value="AMO2D">AMO2D</option>
+    </select>
+  </div>
+  <div class="inputGroup">
   <button type="submit" name="registerBtn" class="btn">Register</button>
 </div>
 <p>

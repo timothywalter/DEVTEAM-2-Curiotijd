@@ -1,19 +1,13 @@
-{{-- <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+@php
+    use App\Models\Achievement;
+    use App\Models\AchievementList;
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <x-jet-welcome />
-            </div>
-        </div>
-    </div>
-</x-app-layout> --}}
+    function idToName($achievementID){
+        
+        return;
+    }
 
+@endphp
 
 @extends('layout.main')
 
@@ -92,11 +86,13 @@
         <ul class="list-group">
             {{-- foreach met erin de badges --}}
             @php
-                $badges = DB::table('achievementslist')->where('studentid', 1)->get()
+                //$badges = DB::table('achievementslist')->where('studentid', 1)->get()
+                $badges = AchievementList::where('studentid', 1)->get();
             @endphp
 
             @foreach ($badges as $badge)
             <li class="list-group-item">{{$badge->id}} </li>
+            {{ idToName($badge->id) }}
             
             @endforeach
             

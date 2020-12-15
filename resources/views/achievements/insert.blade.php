@@ -2,7 +2,7 @@
     badges
 </h2>
 
-<form action="{{url('achievements')}}"  method="post">
+<form action="{{url('achievements.insert')}}"  method="post">
     @csrf
 
     <div>

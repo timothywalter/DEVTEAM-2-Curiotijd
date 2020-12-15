@@ -5,16 +5,20 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 //deze namspace is nodig om gebruik te maken van de db class
 use Illuminate\Support\Facades\DB;
+use App\Models\Achievement;
 
 class AchievementsController extends Controller
 {
     public function index(){
         //haalt data uit de db op
-        $achievments = DB::select("SELECT * FROM achievements");
+        $achievments = Achievement::all();
 
-        return view('achievements', [
+        return view('achievements.index', [
             'achievements' => $achievments
         ]);
+    }
+    public function insert(){
+        return view('achievements.insert');
     }
     public function store(Request $request) {
         DB::table('achievements')->insert(
@@ -24,6 +28,7 @@ class AchievementsController extends Controller
                 'created_by' => 1
             ]
         );
+        return view('achievements.insert');
         dd( $request->all() ); // dit is een soort var_dump($_POST)
     }
 }

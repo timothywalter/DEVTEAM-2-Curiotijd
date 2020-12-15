@@ -90,12 +90,16 @@
     <div id="badgeDIV">
         <h3>Jouw badges:</h3>
         <ul class="list-group">
-{{-- foreach met erin de badges --}}
-            <li class="list-group-item">badge 1</li>
-            <li class="list-group-item">badge 2</li>
-            <li class="list-group-item">badge 3</li>
-            <li class="list-group-item">badge 4</li>
-            <li class="list-group-item">badge 5</li>
+            {{-- foreach met erin de badges --}}
+            @php
+                $badges = DB::table('achievementslist')->where('studentid', 1)->get()
+            @endphp
+
+            @foreach ($badges as $badge)
+            <li class="list-group-item">{{$badge->id}} </li>
+            
+            @endforeach
+            
         </ul>
     </div>
 {{-- End of badge DIV --}}

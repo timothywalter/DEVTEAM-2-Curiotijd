@@ -48,7 +48,11 @@ class UserController extends Controller
                 'deadline' => $request->deadline,
                 'status' => $request->status
             ]);
-            echo "succesvol geinplementeerd";
+            return view('dashboard');
+        }
+
+        public function deleteTask() {
+            
         }
 
         

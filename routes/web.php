@@ -24,12 +24,15 @@ Route::get('/', function () {
 Route::get('account', function () {
     return view('account');
 });
+Route::get('xpbar', function () {
+    return view('xpbar');
+});
 
 Route::post('achievements.insert', [AchievementsController::class, 'store']);
 Route::get('achievements.insert', [AchievementsController::class, 'insert']);
 Route::get('achievements.index', [AchievementsController::class, 'index']);
 Route::get('user', [userController::class, 'levelSysteem']);
-Route::post('task', [userController::class, 'createTask']);
+Route::post('createTask', [UserController::class, 'createTask']);
 
 Route::post('register', [RegisterController::class, 'store']);
 Route::get('register', [RegisterController::class, 'index']);

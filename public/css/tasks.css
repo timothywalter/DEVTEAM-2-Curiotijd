@@ -6,3 +6,7 @@ body {
     position: relative;
     top: 100px;
 }
+.test {
+    position: relative;
+    bottom: -100px;
+}

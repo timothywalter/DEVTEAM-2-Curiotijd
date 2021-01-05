@@ -6,9 +6,10 @@
 
 @section('content')
     
+<div class="test">
+    <form action="{{ url('createTask') }}" method="POST">
 
-    <form action="{{ url('task') }}" method="POST" class="task">
-
+      {{ csrf_field() }}
       <label for="text">Task: </label>
       <input type="text" name="task"><br>
       
@@ -23,6 +24,5 @@
       </select><br>
       <input type="submit">
     </form>
-
-
+</div>
 @endsection

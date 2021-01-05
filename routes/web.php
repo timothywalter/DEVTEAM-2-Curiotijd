@@ -5,6 +5,7 @@ use App\Http\Controllers\AchievementsController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\tasksController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,9 +44,9 @@ Route::post('createTask', [UserController::class, 'createTask']);
 Route::post('register', [RegisterController::class, 'store']);
 Route::get('register', [RegisterController::class, 'index']);
 
-Route::get('dashboard', function () {
-    return view('dashboard');
-});
+
+Route::get('dashboard', [tasksController::class, 'index']);
+
 Route::get('tasks', function () {
     return view('tasks');
 });

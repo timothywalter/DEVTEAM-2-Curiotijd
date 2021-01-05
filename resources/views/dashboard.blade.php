@@ -1,6 +1,7 @@
 @php
     use App\Models\Achievement;
     use App\Models\AchievementList;
+    use App\Models\task;
 
     function idToName($achievementID){
         
@@ -28,22 +29,17 @@
         <div class="col-2 border">
         <h3>Taken:</h3>
         {{-- foreach loop for tasks --}}
+
         @foreach ($tasks as $task)
-            <li><a href="">{{$task->title}}</a></li>   
+            <a href="" class="left">{{$task->task}}</a>
+            <hr>
         @endforeach
-        {{-- <ul class="list-group">
-            <li class="list-group-item">Taak 1</li>
-            <li class="list-group-item">Taak 2</li>
-            <li class="list-group-item">Taak 3</li>
-            <li class="list-group-item">Taak 4</li>
-            <li class="list-group-item">Taak 5</li>
-            <li class="list-group-item">Taak 6</li>
-            <li class="list-group-item">Taak 7</li>
-            <li class="list-group-item">Taak 8</li>
-            <li class="list-group-item">Taak 9</li>
-            <li class="list-group-item">Taak 10</li>
-        </ul> --}}
-        <a href="{{ url('tasks') }}">maak een taks aan!</a>
+
+        <a class="red" href="{{ url('tasks') }}">
+            <button type="button" class="btn btn-success">
+            maak een task aan!
+            </button>
+        </a>
         </div>
 
  {{-- middle collumn --}}

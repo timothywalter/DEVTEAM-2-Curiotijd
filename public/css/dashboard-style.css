@@ -19,3 +19,13 @@
     background-color: lightblue;
     margin-top: 20px;
 }
+
+.red{
+    color: white;
+}
+
+.red:hover{
+    text-decoration: underline;
+    color: white;
+
+}

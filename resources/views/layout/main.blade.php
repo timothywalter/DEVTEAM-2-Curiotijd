@@ -22,7 +22,7 @@
             <a href="">Login</a>
             <a href="">Register</a>
             <a href="">Tasks</a>
-            <a href="">Dashboard</a>
+            <a href="dashboard.php">Dashboard</a>
             <a href="">Home</a>
           </nav>
         </header>

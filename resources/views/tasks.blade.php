@@ -11,13 +11,13 @@
 
       {{ csrf_field() }}
       <label for="text">Task: </label>
-      <input type="text" name="task"><br>
+      <input type="text" name="task" maxlength="35" required><br>
       
       <label for="text">Deadline: </label>
-      <input type="date" name="deadline"><br>
+      <input type="date" name="deadline" required><br>
 
       <label for="text">status: </label>
-      <select id="status" name="status">
+      <select id="status" name="status" required>
         <option value="afgerond">Afgerond</option>
         <option value="bezig">Bezig</option>
         <option value="not_started">nog niet begonnen</option>

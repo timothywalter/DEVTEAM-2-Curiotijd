@@ -18,7 +18,7 @@ class LoginController extends Controller
         $students = Login::all();
 
         return view('/', [
-'login' => $students
+            'login' => $students
         ]);
     }
 

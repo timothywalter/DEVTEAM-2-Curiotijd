@@ -8,7 +8,7 @@
 <div>
     <ul>
         @foreach ($achievements as $achievement)
-        <li>{{$achievement['achievement']}} - exp: {{$achievement['experience']}}</li>
+            <li>{{$achievement['achievement']}} - exp: {{$achievement['experience']}}</li>
         @endforeach
       
     </ul>

@@ -31,4 +31,7 @@ class AchievementsController extends Controller
         return view('achievements.insert');
         dd( $request->all() ); // dit is een soort var_dump($_POST)
     }
+    public function achievements(){
+        return view('achievements.achievements');
+    }
 }

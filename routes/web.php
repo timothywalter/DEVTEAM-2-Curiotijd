@@ -35,6 +35,8 @@ Route::get('xpbar', function () {
 Route::post('achievements.insert', [AchievementsController::class, 'store']);
 Route::get('achievements.insert', [AchievementsController::class, 'insert']);
 Route::get('achievements.index', [AchievementsController::class, 'index']);
+Route::get('achievements.achievements', [AchievementsController::class, 'achievements']);
+
 Route::get('user', [userController::class, 'levelSysteem']);
 Route::post('createTask', [UserController::class, 'createTask']);
 

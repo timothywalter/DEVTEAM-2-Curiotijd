@@ -41,8 +41,14 @@ class UserController extends Controller
         }
 
         public function createTask(Request $request) {
-            dd($request->all());
-            DB::insert("insert into tasklist (task, studentid, deadline, status) values ($request->task, 1, $request->deadline, $request->status)");
+            
+            db::table("taskList")->insert([
+                'task' => $request->task,
+                'studentid' => 1,
+                'deadline' => $request->deadline,
+                'status' => $request->status
+            ]);
+            echo "succesvol geinplementeerd";
         }
 
         

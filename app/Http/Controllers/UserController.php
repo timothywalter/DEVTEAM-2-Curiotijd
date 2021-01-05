@@ -17,7 +17,7 @@ class UserController extends Controller
         $user = DB::table('student')->find(1); // SELECT * FROM STDUENT WHERE id = 2
         //$user = DB::table('student')->where('gender', 'm')->where('status', 'ingeschreven')->get(); 
         $levelup = 100;
-        $xp = $user->total_EXP;
+        $xp = $user->experience;
 
         while  ($xp >= $levelup) {
                 $levelCounter += 1;
@@ -30,7 +30,7 @@ class UserController extends Controller
             // if ($procentxpBar < 0) {
             //     $procentxpBar = 1; 
             // }
-            return view('account',[
+            return view('xpbar',[
                 "level" => $levelCounter,
                 "experience" => $xp,
                 "levelup" => $levelup,
@@ -40,8 +40,9 @@ class UserController extends Controller
                 
         }
 
-        public function createTask() {
-            
+        public function createTask(Request $request) {
+            dd($request->all());
+            DB::insert("insert into tasklist (task, studentid, deadline, status) values ($request->task, 1, $request->deadline, $request->status)");
         }
 
         

@@ -32,6 +32,8 @@ Route::get('account', function () {
 Route::post('achievements.insert', [AchievementsController::class, 'store']);
 Route::get('achievements.insert', [AchievementsController::class, 'insert']);
 Route::get('achievements.index', [AchievementsController::class, 'index']);
+Route::get('achievements.achievements', [AchievementsController::class, 'achievements']);
+
 Route::get('user', [userController::class, 'levelSysteem']);
 Route::post('task', [userController::class, 'createTask']);
 

@@ -27,7 +27,11 @@
     {{-- Left task bar --}}
         <div class="col-2 border">
         <h3>Taken:</h3>
-        <ul class="list-group">
+        {{-- foreach loop for tasks --}}
+        @foreach ($tasks as $task)
+            <li><a href="">{{$task->title}}</a></li>   
+        @endforeach
+        {{-- <ul class="list-group">
             <li class="list-group-item">Taak 1</li>
             <li class="list-group-item">Taak 2</li>
             <li class="list-group-item">Taak 3</li>
@@ -38,7 +42,7 @@
             <li class="list-group-item">Taak 8</li>
             <li class="list-group-item">Taak 9</li>
             <li class="list-group-item">Taak 10</li>
-        </ul>
+        </ul> --}}
         <a href="{{ url('tasks') }}">maak een taks aan!</a>
         </div>
 

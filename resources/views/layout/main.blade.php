@@ -21,7 +21,7 @@
           <nav>
             <a href="">Login</a>
             <a href="">Register</a>
-            <a href="">Run</a>
+            <a href="">Tasks</a>
             <a href="">Dashboard</a>
             <a href="">Home</a>
           </nav>

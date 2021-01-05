@@ -21,6 +21,10 @@ Route::get('/', function () {
     return view('login');
 });
 
+Route::get('login', function () {
+    return view('login');
+});
+
 Route::get('account', function () {
     return view('account');
 });
@@ -44,7 +48,6 @@ Route::get('tasks', function () {
     return view('tasks');
 });
 
-Route::get('login', [LoginController::class, 'loginCheck']);
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //     return view('dashboard');
 // })->name('dashboard');

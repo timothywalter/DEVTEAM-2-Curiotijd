@@ -27,7 +27,10 @@
         <button type="submit" name="login" class="btn">Login</button>
     </div>
     <p>
-        Not yet a member? <a href="register">Sign up</a>
+        Nog geen account? <a href="register">Sign up</a>
+    </p>
+    <p>
+        Docenten login <a href="docent-login">Klik hier</a>
     </p>
 
     </form>

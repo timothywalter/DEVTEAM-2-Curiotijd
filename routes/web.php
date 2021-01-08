@@ -26,6 +26,10 @@ Route::get('login', function () {
     return view('login');
 });
 
+Route::get('docent-login', function () {
+    return view('docentLogin');
+});
+
 Route::get('account', function () {
     return view('account');
 });

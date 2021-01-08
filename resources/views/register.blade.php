@@ -9,18 +9,18 @@
 <body>
   
   <div class="header">    
-  <h1>Register</h1>
+  <h1>Registreer</h1>
 </div>
 
 <form action="{{url('register')}}"  method="post" enctype="multipart/form-data">
   @csrf
  
   <div class="inputGroup">
-      <label>Username: </label>
+      <label>Gebruikersnaam: </label>
       <input type="text" name="Username" required>
   </div>
   <div class="inputGroup">
-      <label>Password: </label>
+      <label>Wachtwoord: </label>
       <input type="password" name="Password" required>
   </div>
   <div class="inputGroup">
@@ -32,10 +32,10 @@
     </select>
   </div>
   <div class="inputGroup">
-  <button type="submit" name="registerBtn" class="btn">Register</button>
+  <button type="submit" name="registerBtn" class="btn">Registreer</button>
 </div>
 <p>
-  Already a member? <a href="/">Login</a>
+  Al een account? <a href="/">Login</a>
 </p>
 
 </form>

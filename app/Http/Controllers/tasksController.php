@@ -18,4 +18,14 @@ class tasksController extends Controller
             'tasks' => $tasks
         ]);
     }
+
+    public function students()
+    {
+        // $tasks = task::all()->get();
+        $students = \DB::table('student')->get();
+        
+        return view('docentDashboard', [
+            'students' => $students
+        ]);
+    }
 }

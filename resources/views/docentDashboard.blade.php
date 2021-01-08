@@ -1,5 +1,3 @@
-{{-- Als student->verified != 1 stuur hem terug naar de login pagina met message "Account not verified" --}}
-
 @php
     use App\Models\Achievement;
     use App\Models\AchievementList;
@@ -27,27 +25,23 @@
 
     {{-- first row --}}
     <div class="row">
-    {{-- Left task bar --}}
-        <div class="col-2 border">
-        <h3>Taken:</h3>
-        {{-- foreach loop for tasks --}}
 
-        @foreach ($tasks as $task)
-            <a href="" class="left">{{$task->task}}</a>
-            <hr>
-        @endforeach
-
-        <a class="red" href="{{ url('tasks') }}">
-            <button type="button" class="btn btn-success">
-            maak een task aan!
-            </button>
-        </a>
-        </div>
-
- {{-- middle collumn --}}
-    <div class="col-5">
-        <h3>Huidige taak: $currentTask</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, laudantium necessitatibus obcaecati maxime, temporibus cupiditate aliquid ipsam quisquam, sequi tempora omnis amet natus? Necessitatibus rerum accusantium, libero consectetur obcaecati deserunt.</p>
+ {{-- left collumn --}}
+    <div class="col-5 ml-4">
+        <h2>Nieuwe accounts:</h2>
+        <hr>
+        <ol>
+            @foreach ($accounts as $account)
+                <li>name: {{$account->username}}
+                    <br>
+                klas: {{$account->Class}}</li>
+                <div class="button-align">
+                    <button class="btn btn-primary mr-3">Goedkeuren</button><button class="btn btn-primary mr-3"> afkeuren</button>
+                </div>
+                
+                <hr>
+            @endforeach
+        </ol>
     </div>
 
  {{-- 3th collumn --}}
@@ -86,20 +80,7 @@
  {{-- badge DIV --}}
     <div id="badgeDIV">
         <h3>Jouw badges:</h3>
-        <ul class="list-group">
-            {{-- foreach met erin de badges --}}
-            @php
-                //$badges = DB::table('achievementslist')->where('studentid', 1)->get()
-                $badges = AchievementList::where('studentid', 1)->get();
-            @endphp
-
-            @foreach ($badges as $badge)
-            <li class="list-group-item">{{$badge->id}} </li>
-            {{ idToName($badge->id) }}
-            
-            @endforeach
-            
-        </ul>
+        
     </div>
 {{-- End of badge DIV --}}
 </div>

@@ -6,6 +6,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\tasksController;
+use App\Http\Controllers\verifyController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -50,6 +51,7 @@ Route::get('register', [RegisterController::class, 'index']);
 
 
 Route::get('dashboard', [tasksController::class, 'index']);
+Route::post('docentDashboard', [verifyController::class, 'selectUnverifiedAccounts']);
 
 Route::get('tasks', function () {
     return view('tasks');

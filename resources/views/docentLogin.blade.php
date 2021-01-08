@@ -12,7 +12,7 @@
   <h1>Docenten login</h1>
 </div>
 
-<form action="{{url('login')}}"  method="post" enctype="multipart/form-data">
+<form action="{{url('docentDashboard')}}"  method="post" enctype="multipart/form-data">
   @csrf
  
   <div class="inputGroup">

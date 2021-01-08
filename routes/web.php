@@ -57,6 +57,5 @@ Route::get('tasks', function () {
     return view('tasks');
 });
 
-// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-//     return view('dashboard');
-// })->name('dashboard');
+Route::get('overzicht/{id}', [tasksController::class, 'overzicht'])->name('overzicht.overzicht');
+

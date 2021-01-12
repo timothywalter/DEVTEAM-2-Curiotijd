@@ -1,26 +1,34 @@
 @php
+
+    // if (Auth::user()->isTeacher != 1) {
+    //     return redirect()->route('login');
+    // }
+
+
     use App\Models\Achievement;
     use App\Models\AchievementList;
     use App\Models\task;
 
-    function idToName($achievementID){
-        
-        return;
-    }
-
+    $id = Auth::user()->id;
+    $name = Auth::user()->name;
 @endphp
+
+@auth
 
 @extends('layout.main')
 
 <head>
     <link rel="stylesheet" href="css\dashboard-style.css">
 </head>
+@section('title')
+    Docent dashboard
+@endsection
 
 @section('content')
 
 <div class="container">
     <h1>dashboard</h1>
-    <h2>Welkom bij Curiotijd, $name</h2>
+    <h2>Welkom bij Curiotijd, {{$name}}</h2>
     <hr>
 
     {{-- first row --}}
@@ -32,7 +40,7 @@
         <hr>
         <ol>
             @foreach ($accounts as $account)
-                <li>name: {{$account->username}}
+                <li>name: {{$account->name}}
                     <br>
                 klas: {{$account->className}}</li>
                 <div class="button-align">
@@ -60,4 +68,6 @@
         @endforeach
     </div>
 </div>
+</div>
 {{-- end of first row --}}
+@endauth

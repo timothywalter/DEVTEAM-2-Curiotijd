@@ -45,6 +45,8 @@ Route::middleware(["auth"])->group(function(){
     Route::get('tasks', function () {
         return view('tasks');
     });
+
+    Route::get('overzicht/{id}', [tasksController::class, 'overzicht'])->name('overzicht.overzicht');
     
 });
 

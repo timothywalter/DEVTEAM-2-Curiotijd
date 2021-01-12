@@ -22,7 +22,7 @@ class tasksController extends Controller
     public function students()
     {
         // $tasks = task::all()->get();
-        $students = \DB::table('student')->get();
+        $students = \DB::table('users')->get();
         
         return view('docentDashboard', [
             'students' => $students

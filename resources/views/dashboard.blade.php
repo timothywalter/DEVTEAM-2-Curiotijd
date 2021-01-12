@@ -18,6 +18,9 @@
 @endphp
 
 @auth
+@section('title')
+    dashboard
+@endsection
 
 @extends('layout.main')
 

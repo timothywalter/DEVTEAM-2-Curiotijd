@@ -2,10 +2,18 @@
     use App\Models\task;
 @endphp
 
-{{-- @foreach ($challenges as $challenge)
+@extends('layout.main')
+
+@section('title')
+    Challenges
+@endsection
+
+@section('content')
+    
+
+@foreach ($challenges as $challenge)
     {{$challenge->id}}
     {{$challenge->task}}
-@endforeach --}}
+@endforeach
 
-
-<p>{{$challenges->task}}</p>
+@endsection

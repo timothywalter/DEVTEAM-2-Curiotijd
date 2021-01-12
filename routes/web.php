@@ -45,7 +45,11 @@ Route::middleware(["auth"])->group(function(){
     Route::get('tasks', function () {
         return view('tasks');
     });
+
+    Route::get('overzicht/{id}', [tasksController::class, 'overzicht'])->name('overzicht.overzicht');
     
+    Route::put('verify/{id}', [UserController::class, 'verifyUser'])->name('user.verify');
+    Route::put('DontVerify/{id}', [UserController::class, 'dontVerifyUser'])->name('user.dontVerify');
 });
 
 Route::get('/', function () {

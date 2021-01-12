@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use app\Models\User;
 
 class UserController extends Controller
 {
@@ -53,6 +54,22 @@ class UserController extends Controller
 
         public function deleteTask() {
 
+        }
+
+        public function verifyUser(Request $request){
+            $user = User::findOrFail($request->id);
+            $user->verified = 1;
+            $user->save();
+
+            return redirect()->route('docentDashboard');
+        }
+
+        public function dontVerifyUser(Request $request){
+            $user = User::findOrFail($request->id);
+            $user->verified = 0;
+            $user->save();
+
+            return redirect()->route('docentDashboard');
         }
 
         

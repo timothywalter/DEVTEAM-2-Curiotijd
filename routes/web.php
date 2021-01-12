@@ -7,6 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\tasksController;
 use App\Http\Controllers\verifyController;
+use App\Http\Controllers\AuthenticatedSessionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,9 +22,14 @@ Route::middleware(["auth"])->group(function(){
     Route::get('xpbar', function () {
         return view('xpbar');
     });   
-    
+
     // dashboard 
     Route::get('dashboard', [tasksController::class, 'index']); 
+    
+    Route::get('/logout', function(){
+        Auth::logout();
+        return Redirect::to('login');
+     });
 });
 
 // Route::get('/', function () {

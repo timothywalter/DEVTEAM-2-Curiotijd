@@ -1,5 +1,3 @@
-
-
 @php
     use App\Models\Achievement;
     use App\Models\AchievementList;
@@ -9,8 +7,9 @@
         
         return;
     }
-
 @endphp
+
+@auth
 
 @extends('layout.main')
 
@@ -143,3 +142,4 @@ leaderbord.style.display = "none"
 }
 </script>
 
+@endauth

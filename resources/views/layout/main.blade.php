@@ -1,3 +1,4 @@
+@auth
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -23,7 +24,7 @@
             <a href="">Register</a>
             <a href="">Tasks</a>
             <a href="dashboard.php">Dashboard</a>
-            <a href="">Home</a>
+            <a href="/logout">Logout</a>
           </nav>
         </header>
         {{-- End of header --}}
@@ -61,3 +62,4 @@
     </body>
     
 </html>
+@endauth

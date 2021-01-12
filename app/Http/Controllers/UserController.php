@@ -14,7 +14,7 @@ class UserController extends Controller
         $levelCounter= 1;
        // $users = DB::Select('select * from student WHERE id = 1');
        // $users = DB::table('student')->get();  // SELECT * FROM students
-        $user = DB::table('student')->find(1); // SELECT * FROM STDUENT WHERE id = 2
+        $user = DB::table('users')->find(1); // SELECT * FROM STDUENT WHERE id = 2
         //$user = DB::table('student')->where('gender', 'm')->where('status', 'ingeschreven')->get(); 
         $levelup = 100;
         $xp = $user->total_EXP;

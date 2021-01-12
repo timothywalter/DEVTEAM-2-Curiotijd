@@ -9,6 +9,12 @@
     }
     $id = Auth::user()->id;
     $name = Auth::user()->name;
+
+    if (Auth::user()->isTeacher == 1) {
+        // return redirect()->route('docentDashboard');
+    }
+
+
 @endphp
 
 @auth
@@ -32,7 +38,7 @@
         <div class="col-2 border">
         <h3>Taken:</h3>
         {{-- foreach loop for tasks --}}
-
+        <a href="docentDashboard">docent NU</a>
         @foreach ($tasks as $task)
             <a href="" class="left">{{$task->task}}</a>
             <hr>

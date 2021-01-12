@@ -10,7 +10,7 @@ class verifyController extends Controller
 {
     public function selectUnverifiedAccounts()
     {
-        $accounts = DB::table('student')->where('verified', 0)->get();
+        $accounts = DB::table('users')->where('verified', 0)->get();
 
         return view('docentDashboard', [
             "accounts" => $accounts

@@ -34,7 +34,7 @@
             @foreach ($accounts as $account)
                 <li>name: {{$account->username}}
                     <br>
-                klas: {{$account->Class}}</li>
+                klas: {{$account->className}}</li>
                 <div class="button-align">
                     <button class="btn btn-primary mr-3">Goedkeuren</button><button class="btn btn-primary mr-3"> afkeuren</button>
                 </div>

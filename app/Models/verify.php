@@ -9,5 +9,5 @@ class verify extends Model
 {
     use HasFactory;
 
-    protected $accounts = 'student';
+    protected $accounts = 'users';
 }

@@ -44,7 +44,18 @@
                     <br>
                 klas: {{$account->className}}</li>
                 <div class="button-align">
-                    <button class="btn btn-primary mr-3">Goedkeuren</button><button class="btn btn-primary mr-3"> afkeuren</button>
+                    <form action="{{route('user.verify', $account->id)}}" method="post">
+                        @csrf
+                        @method('PUT')
+                        <button class="btn btn-primary mr-3" value="{{$account->id}}">Goedkeuren</button>
+                    </form>
+
+                    <form action="{{route('user.dontVerify', $account->id)}}" method="post">
+                        @csrf
+                        @method('PUT')
+                        <button class="btn btn-primary mr-3" value="{{$account->id}}"> afkeuren</button>
+                    </form>
+                    
                 </div>
                 
                 <hr>
@@ -61,7 +72,7 @@
         @foreach ($accounts as $account)
             <ul class="list-unstyled" >
                 <li><a href={{route('overzicht.overzicht', $account->id)}}>
-                    {{$account->username}}
+                    {{$account->name}}
                     {{$account->id}}
                 </a></li>
             </ul>

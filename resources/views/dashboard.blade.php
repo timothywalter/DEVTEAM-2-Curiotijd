@@ -26,11 +26,11 @@
     <div class="row">
     {{-- Left task bar --}}
         <div class="col-2 border">
-        <h3>Taken:</h3>
-        {{-- foreach loop for tasks --}}
-        @foreach ($tasks as $task)
+        {{-- <h3>Taken:</h3> --}}
+        {{-- {{-- foreach loop for tasks --}}
+        {{-- @foreach ($tasks as $task)
             <li><a href="">{{$task->title}}</a></li>   
-        @endforeach
+        @endforeach  --}}
         {{-- <ul class="list-group">
             <li class="list-group-item">Taak 1</li>
             <li class="list-group-item">Taak 2</li>

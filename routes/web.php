@@ -20,7 +20,10 @@ use App\Http\Controllers\verifyController;
 Route::middleware(["auth"])->group(function(){
     Route::get('xpbar', function () {
         return view('xpbar');
-    });    
+    });   
+    
+    // dashboard 
+    Route::get('dashboard', [tasksController::class, 'index']); 
 });
 
 // Route::get('/', function () {

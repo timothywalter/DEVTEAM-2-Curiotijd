@@ -48,7 +48,7 @@ class UserController extends Controller
                 'deadline' => $request->deadline,
                 'status' => $request->status
             ]);
-            return view('dashboard');
+            return redirect('dashboard');
         }
 
         public function deleteTask() {

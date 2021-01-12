@@ -20,7 +20,7 @@ class RegisterController extends Controller
     }
 
    public function store(Request $request){
-DB::table('student')->insert(
+    DB::table('student')->insert(
     [
         'username' => $request['Username'],
         'password' => $request['Password'],

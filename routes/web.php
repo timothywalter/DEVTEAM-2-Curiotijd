@@ -35,7 +35,7 @@ Route::middleware(["auth"])->group(function(){
     Route::post('achievements.insert', [AchievementsController::class, 'store']);
     Route::get('achievements.insert', [AchievementsController::class, 'insert']);
     Route::get('achievements.index', [AchievementsController::class, 'index']);
-    Route::get('achievements.achievements', [AchievementsController::class, 'achievements']);
+    Route::get('achievements.index/{id}', [AchievementsController::class, 'show'])->name("achievements.show");
 
     Route::get('user', [userController::class, 'levelSysteem']);
     Route::post('createTask', [UserController::class, 'createTask']);

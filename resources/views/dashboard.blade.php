@@ -7,6 +7,8 @@
         
         return;
     }
+    $id = Auth::user()->id;
+    $name = Auth::user()->name;
 @endphp
 
 @auth
@@ -21,7 +23,7 @@
 
 <div class="container">
     <h1>dashboard</h1>
-    <h2>Welkom bij Curiotijd, $name</h2>
+    <h2>Welkom bij Curiotijd, {{$name}}</h2>
     <hr>
 
     {{-- first row --}}

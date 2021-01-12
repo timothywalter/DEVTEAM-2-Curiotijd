@@ -57,7 +57,7 @@ Route::post('createTask', [UserController::class, 'createTask']);
 // Route::get('register', [RegisterController::class, 'index']);
 
 
-Route::get('dashboard', [tasksController::class, 'index']);
+// Route::get('dashboard', [tasksController::class, 'index']);
 Route::post('docentDashboard', [verifyController::class, 'selectUnverifiedAccounts']);
 
 Route::get('tasks', function () {

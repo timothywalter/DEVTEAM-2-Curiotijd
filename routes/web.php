@@ -17,25 +17,23 @@ use App\Http\Controllers\verifyController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
-Route::get('/', function () {
-    return view('login');
+Route::middleware(["auth"])->group(function(){
+    Route::get('xpbar', function () {
+        return view('xpbar');
+    });    
 });
 
-Route::get('login', function () {
-    return view('login');
-});
-
+// Route::get('/', function () {
+//     return view('login');
+// });
+// Route::put()
+/*
 Route::get('docent-login', function () {
     return view('docentLogin');
 });
-
+*/
 Route::get('account', function () {
     return view('account');
-});
-Route::get('xpbar', function () {
-    return view('xpbar');
 });
 
 Route::post('achievements.insert', [AchievementsController::class, 'store']);
@@ -46,8 +44,8 @@ Route::get('achievements.achievements', [AchievementsController::class, 'achieve
 Route::get('user', [userController::class, 'levelSysteem']);
 Route::post('createTask', [UserController::class, 'createTask']);
 
-Route::post('register', [RegisterController::class, 'store']);
-Route::get('register', [RegisterController::class, 'index']);
+// Route::post('register', [RegisterController::class, 'store']);
+// Route::get('register', [RegisterController::class, 'index']);
 
 
 Route::get('dashboard', [tasksController::class, 'index']);
@@ -57,5 +55,6 @@ Route::get('tasks', function () {
     return view('tasks');
 });
 
-Route::get('overzicht/{id}', [tasksController::class, 'overzicht'])->name('overzicht.overzicht');
-
+// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+//     return view('dashboard');
+// })->name('dashboard');

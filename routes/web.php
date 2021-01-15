@@ -8,6 +8,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\tasksController;
 use App\Http\Controllers\verifyController;
 use App\Http\Controllers\AuthenticatedSessionController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,7 +53,9 @@ Route::middleware(["auth"])->group(function(){
     Route::put('verify/{id}', [UserController::class, 'verifyUser'])->name('user.verify');
     Route::put('DontVerify/{id}', [UserController::class, 'dontVerifyUser'])->name('user.dontVerify');
 });
-
+Route::post('register', [RegisteredUserController::class, 'store'])
+                ->middleware('guest');
+            
 Route::get('/', function () {
     return view('auth.login');
 });

@@ -57,7 +57,7 @@
 
  {{-- middle collumn --}}
     <div class="col-5">
-        <h3>Huidige taak: $currentTask</h3>
+        <h3>Huidige taak: CurioTijd</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, laudantium necessitatibus obcaecati maxime, temporibus cupiditate aliquid ipsam quisquam, sequi tempora omnis amet natus? Necessitatibus rerum accusantium, libero consectetur obcaecati deserunt.</p>
     </div>
 

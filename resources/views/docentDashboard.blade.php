@@ -69,12 +69,13 @@
         <hr>
         <p>Hieronder ziet u een overzicht van waar alle studenten mee bezig zijn, en hoe ver ze zijn!</p>
         {{-- foreacht loop die alle leerlingen laat zien en als je erop klikt ga je naar de detail page --}}
-        @foreach ($accounts as $account)
+        @foreach ($allAccounts as $account)
             <ul class="list-unstyled" >
                 <li><a href={{route('overzicht.overzicht', $account->id)}}>
-                    {{$account->name}}
-                    {{$account->id}}
-                </a></li>
+                    {{$account->name}}</a>
+                    {{-- {{$account->id}} --}}
+                    <p>With: {{$account->total_EXP }} XP</p>
+                </li>
             </ul>
         @endforeach
     </div>

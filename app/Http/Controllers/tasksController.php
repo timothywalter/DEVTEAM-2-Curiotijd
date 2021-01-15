@@ -34,9 +34,11 @@ class tasksController extends Controller
 
     public function overzicht($id)
     {
-        $challenges = \DB::table('tasklist')->where('id', $id)->get();
+        $challenges = \DB::table('tasklist')->where('studentid', $id)->get();
+        $users = \DB::table('users')->where('id', $id)->get();
         return view('overzicht', [
-            "challenges" => $challenges
+            "challenges" => $challenges,
+            "users" => $users
         ]);
     }
 }

@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="css/xp-bar.css">
         <script src="css/xp-bar.js" defer></script>
 @extends('layout.main')
-
+{{-- <p>kaas</p> --}}
 <head>
     <link rel="stylesheet" href="css\dashboard-style.css">
 </head>

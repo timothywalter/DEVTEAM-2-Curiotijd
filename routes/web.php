@@ -21,7 +21,7 @@ use App\Http\Controllers\AuthenticatedSessionController;
 Route::middleware(["auth"])->group(function(){
 
     // dashboard 
-    Route::get('dashboard', [tasksController::class, 'index']); 
+    Route::get('dashboard', [UserController::Class, 'levelSysteem']); 
     
     Route::get('/logout', function(){
         Auth::logout();

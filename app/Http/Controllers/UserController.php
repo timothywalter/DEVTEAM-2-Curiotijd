@@ -5,18 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use app\Models\User;
+use App\Models\task;
+use Auth;
 
 class UserController extends Controller
 {
     public function levelSysteem() {
-        // if(!isset($_SESSION['gebruikersnaam'])) {
-        //     exit;
-        // }
+        $id = Auth::user()->id;
         $levelCounter= 1;
-       // $users = DB::Select('select * from student WHERE id = 1');
-       // $users = DB::table('student')->get();  // SELECT * FROM students
-        $user = DB::table('users')->find(1); // SELECT * FROM STDUENT WHERE id = 2
-        //$user = DB::table('student')->where('gender', 'm')->where('status', 'ingeschreven')->get(); 
+        $user = DB::table('users')->find($id); 
         $levelup = 100;
         $xp = $user->total_EXP;
 
@@ -28,24 +25,27 @@ class UserController extends Controller
 
             $procentxpBar = $xp / $levelup * 100;
             $xptolevelup = $levelup - $xp; 
-            // if ($procentxpBar < 0) {
-            //     $procentxpBar = 1; 
-            // }
-            return view('xpbar',[
+
+            // $id = Auth::user()->id;
+            // $tasks = task::all()->get();
+            $tasks = \DB::table('tasklist')->where('id', $id)->get();
+
+            return view('dashboard',[
                 "level" => $levelCounter,
                 "experience" => $xp,
                 "levelup" => $levelup,
                 "xpbarprocent" => $procentxpBar,
-                "xptolevelup" => $xptolevelup
+                "xptolevelup" => $xptolevelup,
+                'tasks' => $tasks
             ]);
                 
         }
 
         public function createTask(Request $request) {
-            
+            $id = Auth::user()->id;
             db::table("tasklist")->insert([
                 'task' => $request->task,
-                'studentid' => 1,
+                'studentid' => $id,
                 'deadline' => $request->deadline,
                 'status' => $request->status
             ]);

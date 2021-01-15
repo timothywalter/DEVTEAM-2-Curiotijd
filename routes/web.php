@@ -8,6 +8,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\tasksController;
 use App\Http\Controllers\verifyController;
 use App\Http\Controllers\AuthenticatedSessionController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes

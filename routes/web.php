@@ -23,7 +23,7 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 Route::middleware(["auth"])->group(function(){
 
     // dashboard 
-    Route::get('dashboard', [tasksController::class, 'index']); 
+    Route::get('dashboard', [UserController::Class, 'levelSysteem']); 
     
     Route::get('/logout', function(){
         Auth::logout();

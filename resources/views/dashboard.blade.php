@@ -7,6 +7,7 @@
         
         return;
     }
+    
     $id = Auth::user()->id;
     $name = Auth::user()->name;
 
@@ -14,16 +15,16 @@
         // return redirect()->route('docentDashboard');
     }
 
-
 @endphp
 
 @auth
 @section('title')
     dashboard
 @endsection
-
+<link rel="stylesheet" href="css/xp-bar.css">
+        <script src="css/xp-bar.js" defer></script>
 @extends('layout.main')
-
+{{-- <p>kaas</p> --}}
 <head>
     <link rel="stylesheet" href="css\dashboard-style.css">
 </head>
@@ -56,7 +57,7 @@
 
  {{-- middle collumn --}}
     <div class="col-5">
-        <h3>Huidige taak: $currentTask</h3>
+        <h3>Huidige taak: CurioTijd</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, laudantium necessitatibus obcaecati maxime, temporibus cupiditate aliquid ipsam quisquam, sequi tempora omnis amet natus? Necessitatibus rerum accusantium, libero consectetur obcaecati deserunt.</p>
     </div>
 
@@ -71,7 +72,8 @@
 {{-- start of seccond row --}}
     <div class="row">
         <div class="col-8">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi ab voluptate ducimus laudantium enim eum soluta explicabo commodi quisquam obcaecati sit saepe ipsam temporibus provident est, quae assumenda quidem voluptates?
+            <p class="xpToLevelUp">You need {{$xptolevelup}} more xp to level up!</p>
+            <div class="xp_bar" style="--width: {{$xpbarprocent}}" data-label="Experience"><p class="level">Level: {{$level}}</p></div>
         </div>
     <div class="col-2">
         <button type="button" onclick="leaderbordToggle()" class="btn btn-primary">Leaderbord</button>

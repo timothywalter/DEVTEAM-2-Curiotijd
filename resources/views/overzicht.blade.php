@@ -10,7 +10,7 @@
 
 @section('content')
     
-
+<h2>Taken:</h2>
 @foreach ($challenges as $challenge)
     {{$challenge->id}}
     {{$challenge->task}}

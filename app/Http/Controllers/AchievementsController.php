@@ -17,9 +17,11 @@ class AchievementsController extends Controller
             'achievements' => $achievments
         ]);
     }
+
     public function insert(){
         return view('achievements.insert');
     }
+
     public function store(Request $request) {
         DB::table('achievements')->insert(
             [
@@ -31,7 +33,13 @@ class AchievementsController extends Controller
         return view('achievements.insert');
         dd( $request->all() ); // dit is een soort var_dump($_POST)
     }
-    public function achievements(){
-        return view('achievements.achievements');
+    
+    public function show($id){
+
+        $achievments = Achievement::findOrFail($id);
+
+        return view('achievements.show', [
+            'achievments' => $achievments
+        ]);
     }
 }

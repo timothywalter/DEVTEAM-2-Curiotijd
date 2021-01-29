@@ -48,6 +48,15 @@
                     {{ __('Register') }}
                 </x-button>
             </div>
+            <div>
+                <p>Kies jou klas:</p>
+                <select name="className" id="class">
+                    <option value="AMO2A">AMO2A</option>
+                    <option value="AMO2B">AMO2B</option>
+                    <option value="AMO2C">AMO2C</option>
+                    <option value="AMO2D">AMO2D</option>
+                </select>
+            </div>
         </form>
     </x-auth-card>
 </x-guest-layout>

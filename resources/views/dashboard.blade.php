@@ -42,7 +42,7 @@
         <div class="col-2 border">
         <h3>Taken:</h3>
         {{-- foreach loop for tasks --}}
-        <a href="docentDashboard">docent NU</a>
+        <a href="docentDashboard">docenten pagina</a>
         @foreach ($tasks as $task)
             <a href="" class="left">{{$task->task}}</a>
             <hr>

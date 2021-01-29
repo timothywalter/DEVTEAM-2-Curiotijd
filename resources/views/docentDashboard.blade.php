@@ -1,10 +1,4 @@
 @php
-
-    // if (Auth::user()->isTeacher != 1) {
-    //     return redirect()->route('login');
-    // }
-
-
     use App\Models\Achievement;
     use App\Models\AchievementList;
     use App\Models\task;
@@ -18,7 +12,8 @@
 @extends('layout.main')
 
 <head>
-    <link rel="stylesheet" href="css\dashboard-style.css">
+    <link rel="stylesheet" href="..\css\dashboard-style.css">
+
 </head>
 @section('title')
     Docent dashboard

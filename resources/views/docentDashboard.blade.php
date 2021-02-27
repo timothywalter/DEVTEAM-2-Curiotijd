@@ -37,7 +37,7 @@
             @foreach ($accounts as $account)
                 <li>name: {{$account->name}}
                     <br>
-                klas: {{$account->className}}</li>
+                klas: {{$account->class_name}}</li>
                 <div class="button-align">
                     <form action="{{route('user.verify', $account->id)}}" method="post">
                         @csrf

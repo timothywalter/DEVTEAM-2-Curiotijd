@@ -50,7 +50,7 @@
             </div>
             <div>
                 <p>Kies jou klas:</p>
-                <select name="className" id="class">
+                <select name="class_name" id="class">
                     <option value="AMO2A">AMO2A</option>
                     <option value="AMO2B">AMO2B</option>
                     <option value="AMO2C">AMO2C</option>
